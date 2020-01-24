@@ -9,5 +9,19 @@ namespace petStore.Models
     public int Legs { get; private set; }
     public bool Tail { get; private set; }
     public bool Happy { get; private set; }
+    public int Tolerance { get; private set; }
+
+    //NOTE Created a Dog constructor taking in all the parameters with no default set
+
+    public Dog(string firstName, string type, int legs, bool tail, bool happy, int tolerance)
+    {
+      FirstName = firstName;
+      Type = type;
+      Legs = legs;
+      Tail = tail;
+      Happy = happy;
+      Tolerance = tolerance;
+
+    }
   }
 }
