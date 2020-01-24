@@ -11,17 +11,28 @@ namespace petStore.Models
     public bool Happy { get; private set; }
     public int Tolerance { get; private set; }
 
-    //NOTE Created a Dog constructor taking in all the parameters with no default set
+    //NOTE Method for getting the dog details
 
-    public Dog(string firstName, string type, int legs, bool tail, bool happy, int tolerance)
+    public string DogDetails()
+    {
+      return $@"
+      Name: {FirstName}
+      Type: {Type}
+      Legs: {Legs}
+      Tolerance: {Tolerance}
+      ";
+    }
+
+
+    //NOTE Created a Dog constructor taking in all the parameters with no default set
+    public Dog(string firstName, string type, int legs, int tolerance)
     {
       FirstName = firstName;
       Type = type;
       Legs = legs;
-      Tail = tail;
-      Happy = happy;
+      Tail = true;
+      Happy = true;
       Tolerance = tolerance;
-
     }
   }
 }
