@@ -10,6 +10,8 @@ namespace petStore.Models
     public bool Tail { get; private set; }
     public bool Happy { get; private set; }
     public int Tolerance { get; private set; }
+    //NOTE Needed to add a property for Pets
+    private int Pets { get; set; }
 
     //NOTE Method for getting the dog details
 
@@ -21,6 +23,21 @@ namespace petStore.Models
       Legs: {Legs}
       Tolerance: {Tolerance}
       ";
+    }
+
+    //NOTE public void will not return anything, if you want it to return something than you declare the type string, int etc than down in your function you than will have to return instead of cw.
+    public void PuppyPets()
+    {
+      Pets++;
+      Happy = Pets < Tolerance;
+      if (Happy)
+      {
+        System.Console.WriteLine("I am in such a good mood!");
+      }
+      else
+      {
+        System.Console.WriteLine("Why are you petting me so much?");
+      }
     }
 
 
