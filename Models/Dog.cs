@@ -41,7 +41,7 @@ namespace petStore.Models
     }
 
 
-    //NOTE Created a Dog constructor taking in all the parameters with no default set
+    //NOTE Created a Dog constructor taking in all the parameters with detault boolean values set
     public Dog(string firstName, string type, int legs, int tolerance)
     {
       FirstName = firstName;
